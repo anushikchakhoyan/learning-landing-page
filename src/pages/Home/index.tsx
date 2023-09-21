@@ -1,10 +1,11 @@
 import React from 'react';
+import { Button } from '@mui/material';
 
 import { Container } from './styles';
 
 const Home = () => (
   <Container>
-    hello
+    <Button>dtest</Button>
   </Container>
 );
 

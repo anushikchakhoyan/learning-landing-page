@@ -1,17 +1,17 @@
 import React from 'react';
-import { ThemeProvider } from 'styled-components'
+import { ThemeProvider } from '@mui/material/styles';
 
-import { GlobalStyles } from './styles/global';
-import theme from './styles/theme';
+import useMuiTheme from './styles/useMuiTheme';
 import Home from './pages/Home';
 
 function App() {
-	return (
-		<ThemeProvider theme={theme}>
-			<GlobalStyles />
-			<Home />
-		</ThemeProvider>
-	);
+  const theme = useMuiTheme();
+
+  return (
+    <ThemeProvider theme={theme}>
+      <Home />
+    </ThemeProvider>
+  );
 }
 
 export default App;
