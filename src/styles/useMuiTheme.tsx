@@ -11,7 +11,7 @@ const useMuiTheme = () =>
       createTheme({
         palette: {
           primary: {
-            main: colors.blue['100'],
+            main: colors.blue['500'],
           },
         },
         components: {},

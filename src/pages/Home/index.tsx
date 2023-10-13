@@ -1,11 +1,11 @@
-import React from 'react';
-import { Button } from '@mui/material';
-
 import { Container } from './styles';
+import Header from '../../components/Header';
+import Footer from '../../components/Footer';
 
 const Home = () => (
   <Container>
-    <Button>dtest</Button>
+    <Header />
+    <Footer />
   </Container>
 );
 
