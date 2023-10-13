@@ -1,22 +1,25 @@
 import { useMemo } from 'react';
-import { createTheme } from '@mui/material/styles';
+import { createTheme, PaletteOptions } from '@mui/material/styles';
 
 import customTheme from './customTheme';
 
 const { colors } = customTheme;
 
-const useMuiTheme = () =>
-  useMemo(
+const useMuiTheme = () => {
+  const themeOptions: PaletteOptions = {
+    primary: {
+      main: colors.blue['500'],
+    },
+  };
+
+  return useMemo(
     () =>
       createTheme({
-        palette: {
-          primary: {
-            main: colors.blue['500'],
-          },
-        },
+        palette: themeOptions,
         components: {},
       }),
     [],
   );
+};
 
 export default useMuiTheme;
