@@ -11,11 +11,9 @@ interface Props {
 
 const ErrorPage: React.FunctionComponent = () => {
   const error = useRouteError() as Props | null;
-  // eslint-disable-next-line no-console
-  console.error(error);
 
   return (
-    <ErrorPageWrapper>
+    <ErrorPageWrapper data-testid="error-page">
       <Title>
         Oops! {(error as { status: string }).status}{' '}
         {(error as { statusText: string }).statusText}
